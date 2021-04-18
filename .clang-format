@@ -1,0 +1,8 @@
+# https://clang.llvm.org/docs/ClangFormatStyleOptions.html#configuring-style-with-clang-format
+
+BasedOnStyle: Google
+ColumnLimit: 0
+IndentPPDirectives: None
+IndentWidth: 4
+JavaScriptQuotes: Double
+UseTab: Never

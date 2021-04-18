@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.formatOnSave": true,
+		"files.exclude": {},
+		"search.exclude": {
+			"**/public": true,
+			"**/node_modules": true,
+			"**/*.js": {"when": "$(basename).ts"},
+			"**/**.js": {"when": "$(basename).tsx"}
+		},
+		"search.quickOpen.includeHistory": false
+	}
+}

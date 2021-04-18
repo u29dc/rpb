@@ -1,0 +1,15 @@
+// https://aka.ms/tsconfig.json
+{
+	"compilerOptions": {
+		"target": "ES6",
+		"module": "CommonJS",
+		"noEmit": true,
+		"noEmitOnError": false,
+		"strict": true,
+		"moduleResolution": "node",
+		"esModuleInterop": true,
+		"skipLibCheck": true,
+		"forceConsistentCasingInFileNames": true,
+		"incremental": true
+	}
+}

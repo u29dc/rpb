@@ -1,0 +1,28 @@
+# public build
+/public/**/index.css
+/public/**/index.js
+/public/**/index.html
+
+/public/**/sw.js
+
+/public/**/*.map
+
+##################################################
+
+# dependencies
+node_modules/
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+# editor settings
+.vscode/
+
+# logs
+tmp
+logs
+*.log*
+
+# cache
+*.cache
+*.tsbuildinfo

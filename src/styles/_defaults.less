@@ -1,0 +1,30 @@
+@import 'defaults/_normalize';
+@import 'defaults/_variables';
+@import 'defaults/_fonts';
+
+::selection {
+	color: @color-000;
+	background-color: @color-100;
+}
+
+.noselect {
+	user-select: none;
+}
+
+html,
+body {
+	// .noselect;
+
+	height: 100%;
+	width: 100%;
+	max-width: 100vw;
+	min-height: 100vh;
+
+	overflow: auto;
+
+	margin: 0;
+	padding: 0;
+
+	background-color: @color-000;
+	color: @color-095;
+}
