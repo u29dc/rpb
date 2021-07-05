@@ -1,8 +1,6 @@
 import {generateSW} from 'rollup-plugin-workbox';
-import {getBabelOutputPlugin} from '@rollup/plugin-babel';
 import {minifyHTML} from 'rollup-plugin-minify-html';
 import {terser} from 'rollup-plugin-terser';
-import {threeMinifier} from '@yushijinhun/three-minifier-rollup';
 import autoprefixer from 'autoprefixer';
 import browsersync from 'rollup-plugin-browsersync';
 import commonjs from '@rollup/plugin-commonjs';
@@ -20,9 +18,6 @@ const _sourceDir = './src/';
 const _publicDir = './public/';
 
 const _isProduction = Boolean(process.env.PRODUCTION);
-
-const _babelModules = 'umd';
-const _babelTargets = {browsers: ['defaults', 'last 3 version', 'IE 10']};
 
 const plugins = [
 	eslint({
@@ -50,13 +45,8 @@ if (_isProduction) {
 		del({
 			targets: _publicDir + '{index,sw}.{html,js,css}*',
 		}),
-		threeMinifier(),
 	);
 	plugins.push(
-		getBabelOutputPlugin({
-			presets: [['@babel/preset-env', {modules: _babelModules, targets: _babelTargets}]],
-			compact: true,
-		}),
 		terser({
 			ecma: 5,
 			timings: true,
